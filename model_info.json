@@ -1,13 +1,13 @@
 {
     "project": "Enterprise IT Service Desk Intelligence & Automated Ticket Routing Platform",
-    "model_version": "V1",
+    "model_version": "V2",
     "model_type": "TF-IDF + Logistic Regression",
     "target": "assignment_group",
     "input_features": [
         "subject",
         "description"
     ],
-    "text_processing": "Text cleaning + TF-IDF vectorization",
+    "text_processing": "Text cleaning + TF-IDF vectorization with challenging ambiguous tickets",
     "tfidf": {
         "max_features": 50000,
         "ngram_range": [
@@ -21,10 +21,11 @@
     "classifier": {
         "algorithm": "Logistic Regression",
         "max_iter": 1000,
-        "random_state": 42
+        "random_state": 100
     },
-    "training_samples": 80000,
-    "testing_samples": 20000,
+    "training_samples": 16000,
+    "testing_samples": 4000,
+    "accuracy": 0.872,
     "classes": [
         "Access & Identity Management",
         "Application Support",
