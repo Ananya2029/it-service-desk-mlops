@@ -7,7 +7,7 @@
         "subject",
         "description"
     ],
-    "text_processing": "Text cleaning + TF-IDF vectorization with challenging ambiguous tickets",
+    "text_processing": "Text cleaning + challenging ambiguous tickets",
     "tfidf": {
         "max_features": 50000,
         "ngram_range": [
